@@ -1,0 +1,72 @@
+﻿@model CalculadoraIntereses.Models.Prestar
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+
+
+<h3>Esta seguro de que lo quiere eliminar?</h3>
+<div>
+    <h4>Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plazo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plazo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadPrestada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadPrestada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IniciodePrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IniciodePrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCliente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>
